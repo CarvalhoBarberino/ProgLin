@@ -1,0 +1,76 @@
+MAX;
+F = 2x1 -4x2;
+R1: 50 > 1x1 +2x2;
+R2: 0 < 1x1;
+R3: 0 < 1x2;
+
+
+MAX => true
+VC  = 3
+VD  = 2
+R  = 3
+M4  = 7
+M5  = 3
+R1  = 0 < 1 0
+R2  = 0 < 0 1
+R3  = 30 > 5 4
+
+MAX => true
+VC  = 3
+VD  = 2
+R  = 3
+M4  = 7
+M5  = 3
+R1  = 0 < 1 0
+0 < 1 0dividiu em:
+
+A palavra "R1 " não foi encontrada
+R2  = 0 < 0 1
+0 < 0 1dividiu em:
+
+A palavra "R2 " não foi encontrada
+R3  = 30 > 5 4
+30 > 5 4dividiu em:
+
+A palavra "R3 " não foi encontrada
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sistema{
+	boolean max; // true significa maximizar, false significa minimizar
+	ArrayList<Termos> funcaoObjetivo
+	ArrayList<Restricoes> vecRestricao
+}
+
+Termos{
+	double cte;
+	boolean continua;
+	double variavelContinua;
+	int variavelDiscreta;
+	int modulo;
+}
+
+Restricao{
+	double limite;
+	boolean sinal; // true significa sinal de menor, false significa sinal de maior. Não existe sinal de maiorIgual nem sinal de menorIgual pois é desnecessario
+	ArrayList<Termos> restricao
+}
